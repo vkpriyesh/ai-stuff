@@ -1,0 +1,33 @@
+name: Gitleaks
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+  # statuses: write lets Gitleaks post a commit status check
+  statuses: write
+  # pull-requests: write lets Gitleaks list PR commits and post annotations
+  pull-requests: write
+
+jobs:
+  gitleaks:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        # fetch-depth: 0 fetches full history so git-log based scanning covers all commits
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: set GITLEAKS_LICENSE if you have a Gitleaks Teams/Enterprise licence.
+          # GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}

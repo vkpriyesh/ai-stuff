@@ -1,0 +1,32 @@
+name: Semgrep
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  semgrep:
+    name: Semgrep SAST
+    # Run in the official Semgrep container so no install step is needed
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        # --config auto pulls matching rulesets from the Semgrep Registry for this language stack.
+        # Findings are printed to the workflow log and the job fails if any issues are found.
+        # If SEMGREP_APP_TOKEN is set the results are also synced to the Semgrep AppSec Platform.
+        run: semgrep scan --config auto --text
+        env:
+          # Optional: set this secret to push findings to Semgrep AppSec Platform.
+          # Without it the scan still runs using public OSS rules.
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
