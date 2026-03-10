@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reddit is a network of communities where people share, discuss, and vote on content. Discover topics you love.">
+  <title>Reddit - Find Your Community</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 1: HERO
+       First screen - explains Reddit in under 30 seconds
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <!-- Primary headline - rotate through 3 variations -->
+        <h1 class="hero__headline" data-animate="fade-up">
+          <span class="headline-variation active">One place, a million conversations.</span>
+          <span class="headline-variation">Your interests have a home here.</span>
+          <span class="headline-variation">Where every topic has its people.</span>
+        </h1>
+
+        <!-- Subheadline - plain definition -->
+        <p class="hero__subheadline" data-animate="fade-up" data-delay="100">
+          Reddit is a network of communities where people share, discuss, and vote on content. 
+          Whatever you're into, there's a community waiting.
+        </p>
+
+        <!-- Primary CTAs -->
+        <div class="hero__ctas" data-animate="fade-up" data-delay="200">
+          <a href="#explore" class="btn btn--primary btn--lg">
+            Start exploring
+            <span class="btn__icon" aria-hidden="true">→</span>
+          </a>
+          <a href="#join" class="btn btn--secondary btn--lg">
+            Create an account
+          </a>
+        </div>
+
+        <!-- Reassurance microcopy -->
+        <p class="hero__microcopy" data-animate="fade-up" data-delay="300">
+          Browse anonymously. Join anytime. Your choice.
+        </p>
+      </div>
+
+      <!-- Hero animation container -->
+      <div class="hero__visual" data-animate="scale-in" data-delay="100" aria-hidden="true">
+        <!-- 
+          Animation meaning: Topics flowing into a personalized feed
+          Represents diverse interests (gaming, cooking, tech, etc.) converging 
+          into one unified, customized experience. Bubbles drift and settle into 
+          a central feed, showing how Reddit aggregates your interests.
+        -->
+        <div class="hero-animation">
+          <div class="topic-bubble topic-bubble--1">🎮</div>
+          <div class="topic-bubble topic-bubble--2">🍳</div>
+          <div class="topic-bubble topic-bubble--3">💻</div>
+          <div class="topic-bubble topic-bubble--4">📚</div>
+          <div class="topic-bubble topic-bubble--5">🎵</div>
+          <div class="topic-bubble topic-bubble--6">🌱</div>
+          <div class="topic-bubble topic-bubble--7">🎨</div>
+          <div class="topic-bubble topic-bubble--8">⚽</div>
+          <div class="feed-center">
+            <span class="feed-icon">📱</span>
+            <span class="feed-label">Your Feed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" data-animate="fade-in" data-delay="500" aria-hidden="true">
+      <span class="scroll-indicator__text">See how it works</span>
+      <div class="scroll-indicator__arrow">↓</div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECTION 2: HOW REDDIT WORKS
+         Step-by-step explainer with animated concepts
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="how-heading" class="section-title" data-animate="fade-up">
+            How Reddit works
+          </h2>
+          <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+            Five simple ideas. That's all you need.
+          </p>
+        </header>
+
+        <div class="steps">
+          <!-- Step 1: Communities -->
+          <article class="step" data-animate="slide-in-left" data-delay="100">
+            <div class="step__number" aria-hidden="true">1</div>
+            <div class="step__content">
+              <h3 class="step__title">Find communities (subreddits)</h3>
+              <p class="step__description">
+                Every topic has its own space. Gaming, cooking, career advice, cute animals—
+                these spaces are called "subreddits." Think of them as clubs for any interest.
+              </p>
+              <p class="step__microcopy">
+                💡 Subreddit names start with r/ — like r/photography or r/AskAChef
+              </p>
+            </div>
+            <div class="step__visual" aria-hidden="true">
+              <!-- 
+                Animation meaning: Folders/spaces materializing and organizing
+                Shows how Reddit is structured into distinct topic areas, each 
+                with its own personality and focus
+              -->
+              <div class="step-animation step-animation--communities">
+                <div class="community-card community-card--1">r/GuitarLearners</div>
+                <div class="community-card community-card--2">r/PlantParents</div>
+                <div class="community-card community-card--3">r/StartupStories</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2: Posts -->
+          <article class="step step--reverse" data-animate="slide-in-right" data-delay="200">
+            <div class="step__number" aria-hidden="true">2</div>
+            <div class="step__content">
+              <h3 class="step__title">People share posts</h3>
+              <p class="step__description">
+                Posts can be questions, stories, images, links, or videos. Anyone in the community
+                can share something they think others would find interesting or helpful.
+              </p>
+              <p class="step__microcopy">
+                💡 You can post too, once you join—or just read along
+              </p>
+            </div>
+            <div class="step__visual" aria-hidden="true">
+              <!-- 
+                Animation meaning: Different content types appearing
+                Shows variety of post formats (text, image, link) to demonstrate
+                what kind of content exists on Reddit
+              -->
+              <div class="step-animation step-animation--posts">
+                <div class="post-type post-type--text">📝 Story</div>
+                <div class="post-type post-type--image">🖼️ Photo</div>
+                <div class="post-type post-type--link">🔗 Link</div>
+                <div class="post-type post-type--poll">📊 Poll</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3: Comments -->
+          <article class="step" data-animate="slide-in-left" data-delay="300">
+            <div class="step__number" aria-hidden="true">3</div>
+            <div class="step__content">
+              <h3 class="step__title">Conversations happen in comments</h3>
+              <p class="step__description">
+                Comments are where the real conversation lives. People reply, share expertise,
+                ask follow-up questions, and sometimes just make each other laugh.
+              </p>
+              <p class="step__microcopy">
+                💡 Comments are threaded—replies nest under the comment they respond to
+              </p>
+            </div>
+            <div class="step__visual" aria-hidden="true">
+              <!-- 
+                Animation meaning: Threaded replies cascading down
+                Shows the nested structure of conversations, making it clear 
+                how discussions branch and flow
+              -->
+              <div class="step-animation step-animation--comments">
+                <div class="comment-thread">
+                  <div class="comment comment--1">Great question!</div>
+                  <div class="comment comment--2 comment--reply">Here's what worked for me...</div>
+                  <div class="comment comment--3 comment--reply-deep">Thanks, trying this now!</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4: Voting -->
+          <article class="step step--reverse" data-animate="slide-in-right" data-delay="400">
+            <div class="step__number" aria-hidden="true">4</div>
+            <div class="step__content">
+              <h3 class="step__title">Votes surface the best stuff</h3>
+              <p class="step__description">
+                Upvote what's helpful or interesting. Downvote what's not. The most-voted
+                content rises to the top, so you see what the community values most.
+              </p>
+              <p class="step__microcopy">
+                💡 No follower counts—good content wins, not popularity
+              </p>
+            </div>
+            <div class="step__visual" aria-hidden="true">
+              <!-- 
+                Animation meaning: Posts reordering based on votes
+                Shows an upvote causing a post to rise in the list, making 
+                the voting mechanic tangible and understandable
+              -->
+              <div class="step-animation step-animation--voting">
+                <div class="vote-demo">
+                  <div class="vote-post vote-post--1" data-votes="142">
+                    <span class="vote-arrows">▲ ▼</span>
+                    <span class="vote-count">142</span>
+                  </div>
+                  <div class="vote-post vote-post--2" data-votes="89">
+                    <span class="vote-arrows">▲ ▼</span>
+                    <span class="vote-count">89</span>
+                  </div>
+                  <div class="vote-post vote-post--3 vote-post--rising" data-votes="67">
+                    <span class="vote-arrows">▲ ▼</span>
+                    <span class="vote-count">+1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5: Personalization -->
+          <article class="step" data-animate="slide-in-left" data-delay="500">
+            <div class="step__number" aria-hidden="true">5</div>
+            <div class="step__content">
+              <h3 class="step__title">Your feed becomes yours</h3>
+              <p class="step__description">
+                Join communities, and your home feed fills with content from just those places.
+                You're in control—add, remove, or mute communities anytime.
+              </p>
+              <p class="step__microcopy">
+                💡 No algorithm tricks—you decide what shows up
+              </p>
+            </div>
+            <div class="step__visual" aria-hidden="true">
+              <!-- 
+                Animation meaning: Feed transforming based on selections
+                Shows how joining communities changes what appears, reinforcing
+                user control over their experience
+              -->
+              <div class="step-animation step-animation--personalization">
+                <div class="feed-preview">
+                  <div class="feed-item feed-item--joined">✓ Joined</div>
+                  <div class="feed-arrow">→</div>
+                  <div class="feed-item feed-item--appears">In your feed</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECTION 3: WHAT YOU'LL FIND HERE
+         Use-case grid showing Reddit's range
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="use-cases" id="explore" aria-labelledby="usecases-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="usecases-heading" class="section-title" data-animate="fade-up">
+            What you'll find here
+          </h2>
+          <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+            Reddit isn't one thing—it's thousands of things. Here's a taste.
+          </p>
+        </header>
+
+        <div class="use-case-grid" role="list">
+          <!-- Tile 1: Learn -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="100">
+            <div class="tile__icon" aria-hidden="true">📚</div>
+            <h3 class="tile__title">Learn something new</h3>
+            <p class="tile__description">
+              From beginner questions to expert deep-dives. People love explaining things they know.
+            </p>
+            <span class="tile__example">r/ExplainLikeImFive, r/LearnPython</span>
+          </article>
+
+          <!-- Tile 2: Opinions -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="150">
+            <div class="tile__icon" aria-hidden="true">💬</div>
+            <h3 class="tile__title">Get real opinions</h3>
+            <p class="tile__description">
+              Honest reviews and advice from people who've actually tried it. No sponsored posts.
+            </p>
+            <span class="tile__example">r/HonestReviews, r/IsItWorthIt</span>
+          </article>
+
+          <!-- Tile 3: Hobbies -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="200">
+            <div class="tile__icon" aria-hidden="true">🎯</div>
+            <h3 class="tile__title">Find niche hobbies</h3>
+            <p class="tile__description">
+              Mechanical keyboards? Bread baking? Collecting vintage maps? Your people are here.
+            </p>
+            <span class="tile__example">r/KeyboardEnthusiasts, r/BreadMakers</span>
+          </article>
+
+          <!-- Tile 4: Help -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="250">
+            <div class="tile__icon" aria-hidden="true">🤝</div>
+            <h3 class="tile__title">Ask for help</h3>
+            <p class="tile__description">
+              Tech problems, relationship advice, legal questions—communities full of people who want to help.
+            </p>
+            <span class="tile__example">r/TechSupport, r/NeedAdvice</span>
+          </article>
+
+          <!-- Tile 5: News -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="300">
+            <div class="tile__icon" aria-hidden="true">📰</div>
+            <h3 class="tile__title">Follow news & events</h3>
+            <p class="tile__description">
+              Breaking stories, live discussions, and perspectives you won't find in headlines.
+            </p>
+            <span class="tile__example">r/WorldUpdates, r/ScienceNews</span>
+          </article>
+
+          <!-- Tile 6: Fun -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="350">
+            <div class="tile__icon" aria-hidden="true">😂</div>
+            <h3 class="tile__title">Laugh (a lot)</h3>
+            <p class="tile__description">
+              Memes, jokes, wholesome moments, and absurd humor. Reddit is where internet culture lives.
+            </p>
+            <span class="tile__example">r/WholesomeMemes, r/DadJokes</span>
+          </article>
+
+          <!-- Tile 7: Career -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="400">
+            <div class="tile__icon" aria-hidden="true">💼</div>
+            <h3 class="tile__title">Career advice</h3>
+            <p class="tile__description">
+              Resume reviews, salary discussions, industry insights, and job hunting tips from insiders.
+            </p>
+            <span class="tile__example">r/CareerGuidance, r/ResumeHelp</span>
+          </article>
+
+          <!-- Tile 8: Gaming -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="450">
+            <div class="tile__icon" aria-hidden="true">🎮</div>
+            <h3 class="tile__title">Gaming communities</h3>
+            <p class="tile__description">
+              Every game has a community. Strategies, patch notes, fan art, and people to play with.
+            </p>
+            <span class="tile__example">r/IndieGaming, r/RetroGames</span>
+          </article>
+
+          <!-- Tile 9: Local -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="500">
+            <div class="tile__icon" aria-hidden="true">📍</div>
+            <h3 class="tile__title">Local communities</h3>
+            <p class="tile__description">
+              Your city or region, probably has one. Local events, recommendations, and neighbors.
+            </p>
+            <span class="tile__example">r/YourCityName, r/LocalEats</span>
+          </article>
+
+          <!-- Tile 10: Tech -->
+          <article class="use-case-tile" role="listitem" data-animate="fade-up" data-delay="550">
+            <div class="tile__icon" aria-hidden="true">⚙️</div>
+            <h3 class="tile__title">Tech discussions</h3>
+            <p class="tile__description">
+              From programming to gadgets to AI. Ask questions, share projects, stay current.
+            </p>
+            <span class="tile__example">r/WebDev, r/GadgetTalk</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECTION 4: COMMUNITY-DRIVEN
+         Explains voting, moderation, and guidelines
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="community-driven" id="community" aria-labelledby="community-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="community-heading" class="section-title" data-animate="fade-up">
+            Reddit is community-driven
+          </h2>
+          <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+            Good content rises. Unhelpful stuff sinks. You help make that happen.
+          </p>
+        </header>
+
+        <div class="community-grid">
+          <!-- Voting explanation -->
+          <article class="community-card" data-animate="fade-up" data-delay="150">
+            <div class="community-card__icon" aria-hidden="true">🗳️</div>
+            <h3 class="community-card__title">Why voting exists</h3>
+            <p class="community-card__description">
+              Votes aren't popularity contests—they're quality signals. When you upvote, you're saying
+              "this deserves to be seen." The best, most helpful, most interesting content
+              rises to the top because the community decided it should.
+            </p>
+          </article>
+
+          <!-- Moderation -->
+          <article class="community-card" data-animate="fade-up" data-delay="200">
+            <div class="community-card__icon" aria-hidden="true">🛡️</div>
+            <h3 class="community-card__title">Communities have rules</h3>
+            <p class="community-card__description">
+              Each subreddit has volunteer moderators who set and enforce rules. These aren't
+              power trips—they're how communities stay focused and welcoming. Check the rules
+              before posting (they're in the sidebar).
+            </p>
+          </article>
+
+          <!-- Site-wide policies -->
+          <article class="community-card" data-animate="fade-up" data-delay="250">
+            <div class="community-card__icon" aria-hidden="true">📋</div>
+            <h3 class="community-card__title">Site-wide policies</h3>
+            <p class="community-card__description">
+              Beyond community rules, Reddit has platform-wide policies. No harassment, no hate,
+              no illegal content. These apply everywhere and are enforced by Reddit's safety teams.
+            </p>
+          </article>
+
+          <!-- Safety tools -->
+          <article class="community-card" data-animate="fade-up" data-delay="300">
+            <div class="community-card__icon" aria-hidden="true">🔒</div>
+            <h3 class="community-card__title">You have control</h3>
+            <p class="community-card__description">
+              See something that shouldn't be here? Report it. Someone bothering you? Block them.
+              Content you'd rather not see? Filter it. Your experience, your rules.
+            </p>
+          </article>
+        </div>
+
+        <!-- Good post/comment checklists -->
+        <div class="checklists" data-animate="fade-up" data-delay="350">
+          <article class="checklist">
+            <h3 class="checklist__title">What makes a good post?</h3>
+            <ul class="checklist__list">
+              <li>✓ Adds something new or asks a genuine question</li>
+              <li>✓ Uses a clear, honest title (no clickbait)</li>
+              <li>✓ Fits the community's topic and rules</li>
+              <li>✓ Provides enough context for people to respond</li>
+              <li>✓ Respects others—even when disagreeing</li>
+            </ul>
+          </article>
+
+          <article class="checklist">
+            <h3 class="checklist__title">What makes a good comment?</h3>
+            <ul class="checklist__list">
+              <li>✓ Actually responds to the post or conversation</li>
+              <li>✓ Adds perspective, information, or genuine humor</li>
+              <li>✓ Avoids personal attacks (critique ideas, not people)</li>
+              <li>✓ Cites sources when making factual claims</li>
+              <li>✓ Stays on topic—tangents belong in new threads</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECTION 5: CHOOSE YOUR PATH
+         Two clear journeys: browse or join
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="choose-path" id="join" aria-labelledby="path-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="path-heading" class="section-title" data-animate="fade-up">
+            Choose your path
+          </h2>
+          <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+            There's no wrong way to start. Pick what feels right.
+          </p>
+        </header>
+
+        <div class="path-grid">
+          <!-- Path A: Browse first -->
+          <article class="path-card" data-animate="slide-in-left" data-delay="150">
+            <div class="path-card__badge">No account needed</div>
+            <h3 class="path-card__title">Browse first</h3>
+            
+            <ul class="path-card__benefits">
+              <li>
+                <span class="benefit-icon" aria-hidden="true">👀</span>
+                Read posts and comments immediately
+              </li>
+              <li>
+                <span class="benefit-icon" aria-hidden="true">🔍</span>
+                Search for any topic or community
+              </li>
+              <li>
+                <span class="benefit-icon" aria-hidden="true">🕶️</span>
+                Complete privacy—no tracking, no profile
+              </li>
+            </ul>
+
+            <p class="path-card__description">
+              Not sure if Reddit's for you? Take a look around first. Browse communities,
+              read discussions, explore topics. No pressure. No commitment. When (if) you're
+              ready for more, creating an account takes 30 seconds.
+            </p>
+
+            <a href="#explore" class="btn btn--primary btn--full">
+              Browse now
+              <span class="btn__icon" aria-hidden="true">→</span>
+            </a>
+
+            <p class="path-card__microcopy">
+              You're just a visitor. We don't know you're here. 👋
+            </p>
+          </article>
+
+          <!-- Path B: Join to personalize -->
+          <article class="path-card path-card--featured" data-animate="slide-in-right" data-delay="200">
+            <div class="path-card__badge">Recommended</div>
+            <h3 class="path-card__title">Join to personalize</h3>
+            
+            <ul class="path-card__benefits">
+              <li>
+                <span class="benefit-icon" aria-hidden="true">🏠</span>
+                Custom home feed with your communities
+              </li>
+              <li>
+                <span class="benefit-icon" aria-hidden="true">💬</span>
+                Post, comment, and vote on content
+              </li>
+              <li>
+                <span class="benefit-icon" aria-hidden="true">💾</span>
+                Save posts and track conversations
+              </li>
+            </ul>
+
+            <p class="path-card__description">
+              Ready to participate? An account unlocks everything. Join communities to build
+              your personalized feed. Post questions, share answers, vote on what matters.
+              It's free, and you can use any username you want—anonymity is the default.
+            </p>
+
+            <a href="#signup" class="btn btn--primary btn--full">
+              Create an account
+              <span class="btn__icon" aria-hidden="true">→</span>
+            </a>
+
+            <p class="path-card__microcopy">
+              Free forever. Delete anytime. Your data is yours.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECTION 6: FAQ
+         8 questions for newcomers
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="faq-heading" class="section-title" data-animate="fade-up">
+            Common questions
+          </h2>
+          <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+            Everything you need to know, nothing you don't.
+          </p>
+        </header>
+
+        <div class="faq-list" role="list">
+          <!-- FAQ 1 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="150">
+            <summary class="faq-question">
+              <span>Do I need an account to use Reddit?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. You can browse Reddit, read posts, and view comments without signing up.
+                An account is only needed if you want to post, comment, vote, or save content.
+                Many people lurk for months (or years) before making an account.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="200">
+            <summary class="faq-question">
+              <span>What is a subreddit?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                A subreddit is a community dedicated to a specific topic. It has its own page,
+                rules, and members. Subreddits are named with "r/" in front—like r/Photography
+                or r/AskHistorians. Think of them as forums within Reddit, each with its own
+                culture and focus.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="250">
+            <summary class="faq-question">
+              <span>What are upvotes and downvotes?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Upvotes and downvotes are how the community rates content. Upvote (arrow up) means
+                "this is good/helpful/interesting." Downvote (arrow down) means the opposite.
+                Content with more upvotes appears higher in feeds and search results. Your total
+                upvotes minus downvotes becomes your "karma" score—but don't worry about that.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="300">
+            <summary class="faq-question">
+              <span>Is Reddit social media?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sort of, but different. Reddit is organized around topics and communities, not
+                people and followers. You don't follow friends—you follow interests. Content is
+                ranked by community votes, not by who posted it. Most users are pseudonymous,
+                and building a "personal brand" isn't really the point.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="350">
+            <summary class="faq-question">
+              <span>Can I post anonymously?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes—in fact, that's the norm. You create a username that isn't your real name,
+                and that's what people see. You can even create multiple accounts for different
+                purposes (just don't use them to manipulate votes). Anonymity is built in.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="400">
+            <summary class="faq-question">
+              <span>How do I find communities?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Use the search bar to look for topics you care about. Reddit will show relevant
+                communities. You can also browse "Popular" or "All" to discover what's trending.
+                Many subreddits link to related communities in their sidebars, and there are
+                communities specifically for finding new communities (like r/FindAReddit).
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="450">
+            <summary class="faq-question">
+              <span>How is content moderated?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Two layers. First, each subreddit has volunteer moderators who enforce that
+                community's specific rules (on-topic, civil, etc.). Second, Reddit's admins
+                enforce platform-wide rules (no harassment, no illegal content, etc.). You
+                can report posts or comments that violate either level of rules.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 8 -->
+          <details class="faq-item" data-animate="fade-up" data-delay="500">
+            <summary class="faq-question">
+              <span>How do I stay safe and control what I see?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                You have several tools: Block users who bother you, and you'll never see their
+                content again. Mute communities you don't like. Report content that violates
+                rules. Enable content filters for topics you want to avoid. Disable DMs from
+                strangers if you prefer. Your account settings give you control.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 7: FOOTER
+       Closing line and links
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__tagline" data-animate="fade-up">
+        Reddit: where your interests find their people.
+      </p>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#help">Help</a></li>
+          <li><a href="#rules">Rules</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#advertise">Advertise</a></li>
+          <li><a href="#careers">Careers</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer__microcopy">
+        Made for curiosity.
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
