@@ -1,0 +1,84 @@
+// ============================================================
+// VS Code Settings for GitHub Copilot with Claude Models
+// ============================================================
+//
+// Add these to your VS Code settings.json (Ctrl+Shift+P → "Open User Settings (JSON)")
+// These settings configure Copilot to behave with production-grade coding discipline.
+//
+// IMPORTANT: Select Claude Opus or Sonnet as your Copilot model:
+//   1. Open Copilot Chat
+//   2. Click the model selector (bottom of chat panel)
+//   3. Choose "Claude 3.5 Sonnet" or "Claude Opus" (if available)
+//
+
+{
+  // ---- Copilot Core Settings ----
+  "github.copilot.enable": {
+    "*": true
+  },
+
+  // ---- Enable Agent Mode & Instructions ----
+  "chat.agent.enabled": true,
+  "chat.includeApplyingInstructions": true,
+
+  // ---- Instruction File Locations ----
+  // Copilot will automatically discover:
+  //   .github/copilot-instructions.md
+  //   .github/instructions/*.instructions.md
+  //   .github/agents/*.md
+  //   AGENTS.md
+  //
+  // For monorepos, enable nested discovery:
+  "chat.useNestedAgentsMdFiles": true,
+
+  // ---- Code Generation Instructions (Global) ----
+  // These apply to ALL Copilot code generation, across all projects.
+  "github.copilot.chat.codeGeneration.instructions": [
+    // Coding discipline
+    { "text": "Read files before modifying them. Understand existing code before suggesting changes." },
+    { "text": "Don't add features, refactoring, comments, or type annotations beyond what was asked." },
+    { "text": "Don't add error handling for impossible scenarios. Only validate at system boundaries." },
+    { "text": "Don't create abstractions for one-time operations. Three similar lines > premature abstraction." },
+    { "text": "Only add comments when the WHY is non-obvious. Never explain WHAT the code does." },
+    { "text": "If something is unused, delete it completely. No backwards-compat hacks." },
+
+    // Safety
+    { "text": "Never force push, reset --hard, skip hooks, or commit unless explicitly asked." },
+    { "text": "Stage specific files by name, not 'git add -A'. Don't commit secrets." },
+    { "text": "Always create NEW commits. Never amend unless explicitly asked." },
+    { "text": "Prevent OWASP top 10 vulnerabilities. Fix insecure code immediately." },
+
+    // Quality
+    { "text": "Verify work actually functions before reporting complete." },
+    { "text": "Report outcomes faithfully. Never claim tests pass when they don't." },
+    { "text": "If an approach fails, diagnose why before switching tactics." },
+
+    // Style
+    { "text": "Be concise. Lead with the answer, not the reasoning. No filler." },
+    { "text": "If you can say it in one sentence, don't use three." },
+    { "text": "Reference code as file_path:line_number." }
+  ],
+
+  // ---- Test Generation Instructions ----
+  "github.copilot.chat.testGeneration.instructions": [
+    { "text": "Use descriptive test names explaining the scenario." },
+    { "text": "One assertion per test. Test behavior, not implementation." },
+    { "text": "Cover: happy path, edge cases (null, empty, boundary), error cases." },
+    { "text": "Mock external services, not internal logic." },
+    { "text": "Match the existing test framework and style in the project." }
+  ],
+
+  // ---- Code Review Instructions ----
+  "github.copilot.chat.reviewSelection.instructions": [
+    { "text": "Check for: correctness, security (OWASP top 10), performance (N+1 queries, missing indexes), and maintainability." },
+    { "text": "Rate issues as critical/warning/suggestion with specific fix recommendations." },
+    { "text": "Look for: injection, XSS, auth issues, race conditions, error handling gaps." }
+  ],
+
+  // ---- Commit Message Instructions ----
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "text": "Focus on WHY, not WHAT. 'add' = new feature, 'update' = enhancement, 'fix' = bug fix." },
+    { "text": "Concise: 1-2 sentences. Use imperative mood ('add', not 'added')." },
+    { "text": "Don't include file lists in the message - git tracks that." }
+  ]
+}
